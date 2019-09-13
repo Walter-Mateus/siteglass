@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8"/>
+        <title>Tudo Sobre  Google Glass</title>
+        <link rel="stylesheet" href="_css/estilo.css"/>
+        <link rel="stylesheet" href="_css/form.css"/>
+</head>
+<script lang="javascript" src="_javascript/funcoes.js"></script>
+<script>
+    function cal_total() {
+        var qtd = parseInt(document.getElementById('cqtd').value);
+        tot = qtd*15000;
+        document.getElementById('cTot').value = tot;
+    }
+</script>
+<body>
+<div id="interface">
+          
+        <header id="cabecalho">
+            <hgroup>
+               <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+
+            <img id="icone" src="_imagens/contato.png"/>
+            <nav id="menu">
+                 <h1>Menu Principal</h1>
+                 <ul type="disc">
+    <li onmouseover="mudarFoto('_imagens/home.png')" onmouseout="mudarFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+    <li onmouseover="mudarFoto('_imagens/especificacoes.png')" onmouseout="mudarFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+    <li onmouseover="mudarFoto('_imagens/fotos.png')" onmouseout="mudarFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+    <li onmouseover="mudarFoto('_imagens/multimidia.png')" onmouseout="mudarFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+             <li onmouseover="mudarFoto('_imagens/contato.png')" onmouseout="mudarFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+         </ul>
+    </nav>
+</header>
+<section id="corpo-full">
+        <article id="noticia-principal">
+         <header id="cabecalho-artigo">
+
+<hgroup>
+      <h3>Fale Conosco > Contato</h3>
+      <h1>Formulário de Contato</h1>
+      <h2>by Walter Mateus</h2>
+      <h3 class="direita">Atualizado em 31/Agosto/2019</h3>
+   </hgroup>
+</header>
+
+<form method="post" id="fcontato" action="waltermatheus.wm@hotmail.com" oninput="cal_total();">
+
+    <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+   <p><label for="cNome">Nome:</label>
+    <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
+    <p><label for="cSenha">Senha:</label><input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 digitos" /></p>
+    <p><label for="cMail">E-mail:</label><input type="email" name="tMail" id="cMail" size="20" maxlength="40"/></p>
+    <fieldset id="sexo"><legend>Sexo</legend>
+        <input type="radio" name="tSexo" id="cMasc" checked/><label for="cMasc"> Masculino</label> <br/>       <input type="radio" name="tSexo" id="cFem" /><label for="cFem">Feminino</label></fieldset>
+    <p><label for="cNasc">Data de Nascimento:</label><input type="date" name="tNasc" id="cNasc"></p>
+</fieldset>
+
+<fieldset id="endereco"><legend>Endereço do Usuário</legend>
+    <p><label for="cRua">Morada:</label><input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Bairro, Zona,"/> </p>
+    <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="99999"/></p>
+    <p><label for="cEst">Provincia:</label><select name="tEst" id="cEst">
+       <optgroup label="Regiao Sentetrional e Meridional"> <option selected value="LD">Luanda</option>
+            <option value="CA">Cabinda</option>
+            <option value="BE">Benguela</option>
+            <option value="HA">Huila</option>
+            <option value="MA">Malanje</option>
+            <option value="CU">Cunene</option>
+            <option value="CS">Cuanza Sul</option>
+            <option value="CN">Cuanza Norte</option>
+            <option value="MX">Moxico</option>
+            <option value="UI">Uige</option>
+        </optgroup>
+        
+        <optgroup label="Regiao Oriente e Ocidente">
+            <option value="CC">Cuando Cubango</option>
+            <option value="NB">Namibe</option>
+            <option value="BI">Bie</option>
+            <option value="BE">Bengo</option>
+            <option value="LS">Lunda Sul</option>
+            <option value="LN">Lunda Norte</option>
+            <option value="ZA">Zaire</option>
+            <option value="HU">Huambo</option>
+            </optgroup>
+    </select></p>
+    <p><label for="cCid">Cidade ou Municipio:</label><input type="text" name="tCid" id="cCid" maxlength="40"  size="20" placeholder="cidade ou municipio" list="cidades"/></p>
+    <datalist id="cidades">
+        <option value="LD">Luanda</option>
+        <option value="CA">Cabinda</option>
+        <option value="BE">Benguela</option>
+        <option value="HA">Lubango</option>
+        <option value="MA">Malanje</option>
+        <option value="CU">Ondjiva</option>
+        <option value="CS">Sumbe</option>
+        <option value="CN">N'dalatando</option>
+        <option value="MX">Luena</option>
+        <option value="UI">Uige</option>
+        <option value="CC">Menongue</option>
+        <option value="NB">Tombwa</option>
+        <option value="BI">Kuito</option>
+        <option value="BE">Caxito</option>
+        <option value="LS">Saurimo</option>
+        <option value="LN">Lucapa</option>
+        <option value="ZA">Zaire</option>
+        <option value="HU">M'banza-Kongo</option>
+
+    </datalist>
+</fieldset>
+<fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+    <p><label for="cUrg">Grau de Urgência:</label> Min
+    <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/> Max</p>
+    <p><label for="cMsg">Mensagem:</label><textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+</fieldset>
+<fieldset id="pedido"><legend>Quero um Google Glass</legend>
+    <p><input type="checkbox" name="tped" id="cPed" checked/>
+    <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="cCor">Cor:</label>
+    <input type="color" name="" id="" value="#0000FF"></p>
+    <p><label for="cQtd">Quantidade:</label>
+    <input type="number" name="tQtd" id="cqtd" min="0" max="5" value="0" /></p>
+    <p><label for="ctot">Preço Total: Kwanzas</label>
+    <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly/></p>
+   <!-- <input type="submit" value="Enviar"/>-->
+    <input type="image" name="tEnviar" src="_imagens/botao-enviar.png"/>
+</fieldset>
+
+</form>
+</article>
+</section>
+<footer id="rodape">
+    <p>Copyright &copy; 2019 - by Walter Mateus <br/>
+        <a href="http://facebook.com/waltermateus" target="_blank">Facebook</a> | <a href="http://instagram.com/young_lyra" target="_blank">Instagram</a></p>
+</footer>
+</div>
+</body>
+</html>
